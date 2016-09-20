@@ -65,7 +65,11 @@ $( document ).ready(function() {
                 r+= '<div class="row">';
             }
         r += '<div class="col-md-4">';
-        r += '<a class="thumbnail" href=percorso.html?id='+d['ID']+'>';
+        r += '<a class="thumbnail"';
+      	if (d['ID'] == 1 || d['ID'] == 13 ||d['ID'] == 15 ){
+         r += 'href=percorso.html?id='+d['ID'];
+         }
+         r += '>';
         r += '<h3 class="sottotitolo">'+d['NOME']+'</h3>';
         r += '<img class="img-responsive thumb" src="'+d['THUMBNAIL']+'">';
         r += '</a>';
